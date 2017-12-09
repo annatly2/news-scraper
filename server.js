@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/news", {
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
+mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });
 
