@@ -36,7 +36,6 @@ app.get("/scrape", function(req,res){
         var result = {};
 
         // console.log($(this).html());
-
         result.title = $(this)
         .children(".story-heading")
         .text();
@@ -53,24 +52,21 @@ app.get("/scrape", function(req,res){
           db.Article
           .create(result)
           .then(function(dbArticle){
-
             // console.log(result);
             try {
-              res.send("success!");
+              res.send("Success!");
             } catch (error) {
-              
             }
           })
           .catch(function(err){
             
             try {
               res.json(err);
-            } catch (error) {
-              
+            } 
+            catch (error) {
             }
           });
         }
-
       });
     });
 });

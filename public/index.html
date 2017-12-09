@@ -2,17 +2,63 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>News Scraper</title>
+    <title>Mongo Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
+      .jumbotron{
+        background-image: url("background.jpg");
+      }
+
+      .articles-section{
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding; 2px;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 65%;
+        height: 700px;
+      }
+
+      #comments {
+        float: right;
+        width: 30%;
+        font-style: italic;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: rgb(141, 208, 224);
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 12px;
+      }
+
     </style>
   </head>
   <body>
-    <div id="wrapper">
-      <h1>News Scraper App</h1>
+    <div class = "container">
+        <div class="jumbotron text-center">
+            <h1 class="display-3">Mongo Scraper</h1>
+            <p class="lead">New York Times Edition</p>
+        </div>
+    </div>
+
+    <div class ="container articles-section">
       <div id="articles"></div>
       <div id="comments"></div>
+      <div id = "summary"></div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
     <script src="app.js"></script>
   </body>
 </html>
